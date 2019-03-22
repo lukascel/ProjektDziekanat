@@ -27,7 +27,7 @@ public class DziekanatController {
     private Label lblLogin;
 
     @FXML
-    private TextArea taLogin;
+    private TextField tfLogin;
 
     @FXML
     private Label lblPassword;
@@ -63,7 +63,7 @@ public class DziekanatController {
     @FXML
     void loginEvent(MouseEvent event) throws IOException {
 
-        String login = taLogin.getText();
+        String login = tfLogin.getText();
         String pass = psPassword.isVisible()? psPassword.getText(): tfPassword.getText();
 
         LoginService loginService = new LoginService();
@@ -79,6 +79,14 @@ public class DziekanatController {
                 Parent root = FXMLLoader.load(getClass().getResource("/viewers/userView.fxml"));
                 primaryStage.setTitle("UserView");
                 primaryStage.setScene(new Scene((root)));
+                primaryStage.show();
+
+            } else if (RoleEnum.ROLE_ADMIN.equals((role))) {
+                Stage primaryStage = DziekanatMain.getPrimaryStage();
+
+                Parent root = FXMLLoader.load(getClass().getResource("/viewers/adminView.fxml"));
+                primaryStage.setTitle("AdminView");
+                primaryStage.setScene(new Scene(root));
                 primaryStage.show();
             }
         }
