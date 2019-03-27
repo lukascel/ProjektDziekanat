@@ -10,8 +10,6 @@ import pl.pwn.reaktor.dziekanat.utils.HibernateUtils;
 public class DziekanatMain extends Application { //extendsApplication - mamy nadpisaną metodę start więc wykonuje się zawsze, na początku, jakby main.
 
     private static Stage primaryStage;
-
-
     //W Java FX - metoda uzywana do uruchomienia projektu bez kompilatora tylko z wyeksportowanego jar'a
     @Override
     public void start(Stage primaryStage) throws Exception {

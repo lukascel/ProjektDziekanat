@@ -119,7 +119,7 @@ public class DziekanatController {
 
     @FXML
     void loginKeyAction(KeyEvent event) throws IOException {
-        if(KeyCode.ENTER.equals(event.getCode())){ //sprawdzam czy kod spod entera jest zgodny z event'em - z SceneBuilder'ra tam gdzieprzypisywałem te eventy
+        if(KeyCode.ENTER.equals(event.getCode())){ //sprawdzam czy kod spod entera jest zgodny z event'em - z SceneBuilder'ra tam gdzie przypisywałem te eventy,
             loginEvent(null); //daje mu nulla, bo jak chce wchodzić enterem to nie za pomocą klikiem myszki. Po kliknieciu enter ma wywołać metodę z klikniecia myszką
         }
     }
