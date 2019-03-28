@@ -14,10 +14,12 @@ public class SignInService {
 
         Transaction transaction = session.beginTransaction();
 
-        String queryString = "INSERT INTO user VALUES(1, 'login', 'password', 'ROLE_STUDENT')";
+        String queryString = "INSERT INTO user(id, login, password, role, active) VALUES(id, 'username', 'pass', 'ROLE_STUDENT', 1)";
         Query query = session.createQuery(queryString);
-        query.setParameter("login", userName);
-        query.setParameter("password", password);
+        query.setParameter("username", userName);
+        query.setParameter("pass", password);
+        query.setMaxResults(1);
+
         User registredUser = (User) query.uniqueResult();
 
         transaction.commit();
