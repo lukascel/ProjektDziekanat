@@ -2,6 +2,7 @@ package pl.pwn.reaktor.dziekanat.controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Cursor;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -16,6 +17,7 @@ import javafx.stage.Stage;
 import pl.pwn.reaktor.dziekanat.DziekanatMain;
 import pl.pwn.reaktor.dziekanat.model.RoleEnum;
 import pl.pwn.reaktor.dziekanat.model.User;
+import pl.pwn.reaktor.dziekanat.model.utils.CurrentUser;
 import pl.pwn.reaktor.dziekanat.service.LoginService;
 
 import java.io.IOException;
@@ -50,6 +52,7 @@ public class DziekanatController {
     @FXML
     private TextField tfPassword;
 
+
     @FXML
     void guestEvent(MouseEvent event)  throws IOException{
         Stage primaryStage = DziekanatMain.getPrimaryStage();
@@ -72,6 +75,8 @@ public class DziekanatController {
         if(user!=null){
             RoleEnum role = user.getRole();
             System.out.println("Zalogowano użytkownika: " + login + "o roli: " + role);
+
+            CurrentUser.setCurrentUser(user); //zapamietuje kto się zalogował. Trzymam to w klasie model-utils-currentUser. Żebym wiedział kto jest zalogowany
 
             if (RoleEnum.ROLE_STUDENT.equals(role)){
                 Stage primaryStage = DziekanatMain.getPrimaryStage();

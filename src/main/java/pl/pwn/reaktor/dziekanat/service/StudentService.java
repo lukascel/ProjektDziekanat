@@ -1,33 +1,29 @@
 package pl.pwn.reaktor.dziekanat.service;
 
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import pl.pwn.reaktor.dziekanat.model.User;
+import pl.pwn.reaktor.dziekanat.model.Student;
 import pl.pwn.reaktor.dziekanat.utils.HibernateUtils;
 
-import java.io.Serializable;
-
-public class SignInService {
-
-    public long save (User user){
+public class StudentService {
+    public void save(Student student){
         Session session = HibernateUtils.getSessionFactory()
                 .openSession();
 
         Transaction transaction = session.beginTransaction();
 
-        long id = (Long) session.save(user);
-
+        session.save(student);
         transaction.commit();
         session.close();
-        return id;
     }
 
-    public void update(User user){
+    public void update(Student student) {
         Session session = HibernateUtils.getSessionFactory()
                 .openSession();
         Transaction transaction = session.beginTransaction();
 
-        session.update(user);
+        session.update(student);
 
         transaction.commit();
         session.close();

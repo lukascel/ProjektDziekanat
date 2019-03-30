@@ -25,5 +25,14 @@ public class User {
 
     private boolean active;
 
+    @OneToOne
+    @JoinColumn(name = "nasz_student", nullable = true) //podaję nazwę kolumny po której bedzie łączył te tabele. Przy onetoone trzeba zrobić joincolun. tak samo onetomany. Many to many - join table!
+    private Student student;
 
+    public User(String login, String password, RoleEnum role, boolean active) {
+        this.login = login;
+        this.password = password;
+        this.role = role;
+        this.active = active;
+    }
 }
