@@ -23,16 +23,16 @@
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
-              <MenuItem fx:id="mSaveToFile" mnemonicParsing="false" text="SaveToFile" />
-                  <MenuItem fx:id="mSendEmail" mnemonicParsing="false" text="SendEmail" />
-                  <MenuItem fx:id="mSaveToDatabase" mnemonicParsing="false" text="SaveToDatabase" />
-                  <MenuItem fx:id="mClear" mnemonicParsing="false" text="Close" />
-                  <MenuItem fx:id="mClose" mnemonicParsing="false" text="Close" />
+              <MenuItem fx:id="mSaveToFile" mnemonicParsing="false" onAction="#SaveToFileAction" text="SaveToFile" />
+                  <MenuItem fx:id="mSendEmail" mnemonicParsing="false" onAction="#SendMailAction" text="SendEmail" />
+                  <MenuItem fx:id="mSaveToDatabase" mnemonicParsing="false" onAction="#SaveToDBAction" text="SaveToDatabase" />
+                  <MenuItem fx:id="mClear" mnemonicParsing="false" onAction="#ClearAction" text="Clear" />
+                  <MenuItem fx:id="mClose" mnemonicParsing="false" onAction="#CloseAction" text="Close" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Help">
             <items>
-              <MenuItem fx:id="mAbout" mnemonicParsing="false" text="About" />
+              <MenuItem fx:id="mAbout" mnemonicParsing="false" onAction="#AboutAction" text="About" />
             </items>
           </Menu>
         </menus>

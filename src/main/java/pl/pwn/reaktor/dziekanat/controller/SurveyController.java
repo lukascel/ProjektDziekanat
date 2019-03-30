@@ -1,13 +1,8 @@
 package pl.pwn.reaktor.dziekanat.controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleGroup;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 
 public class SurveyController {
@@ -70,12 +65,46 @@ public class SurveyController {
     private TextField tfPhone;
 
     @FXML
+    void AboutAction(ActionEvent event) {
+        Alert info = new Alert(Alert.AlertType.INFORMATION);
+        info.setTitle("Survey Information");
+        info.setHeaderText("This is some info about survey: ");
+        info.setContentText("Instructions, how to fulfill survey correctly");
+        info.show();
+    }
+
+    @FXML
+    void ClearAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void CloseAction(ActionEvent event) {
+        System.exit(0);
+    }
+
+    @FXML
     void OtherAction(MouseEvent event) {
 
     }
 
     @FXML
     void PreviewAction(MouseEvent event) {
+
+    }
+
+    @FXML
+    void SaveToDBAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void SaveToFileAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void SendMailAction(ActionEvent event) {
 
     }
 
