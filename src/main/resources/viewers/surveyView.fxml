@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.pwn.reaktor.dziekanat.controller.SurveyController">
+   <children>
+      <MenuBar layoutX="-1.0" layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="mSaveToFile" mnemonicParsing="false" text="SaveToFile" />
+                  <MenuItem fx:id="mSendEmail" mnemonicParsing="false" text="SendEmail" />
+                  <MenuItem fx:id="mSaveToDatabase" mnemonicParsing="false" text="SaveToDatabase" />
+                  <MenuItem fx:id="mClear" mnemonicParsing="false" text="Close" />
+                  <MenuItem fx:id="mClose" mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="mAbout" mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Separator layoutX="180.0" layoutY="62.0" orientation="VERTICAL" prefHeight="337.0" prefWidth="0.0" />
+      <Separator layoutX="401.0" layoutY="62.0" orientation="VERTICAL" prefHeight="337.0" prefWidth="0.0" />
+      <Separator layoutY="61.0" prefHeight="3.0" prefWidth="600.0" />
+      <Label layoutX="78.0" layoutY="36.0" text="CONTACT" />
+      <Label layoutX="258.0" layoutY="36.0" text="COMPETENCES" />
+      <Label layoutX="482.0" layoutY="36.0" text="COURSE" />
+      <Label layoutX="224.0" layoutY="64.0" text="Programming languages:" />
+      <Label layoutX="462.0" layoutY="64.0" text="Course selection" />
+      <Label layoutX="404.0" layoutY="153.0" text="Preview:" />
+      <VBox layoutX="199.0" layoutY="98.0" prefHeight="84.0" prefWidth="183.0">
+         <children>
+            <CheckBox fx:id="cbJava" mnemonicParsing="false" text="Java" />
+            <CheckBox fx:id="cbPython" mnemonicParsing="false" text="Python" />
+            <CheckBox fx:id="cbOther" mnemonicParsing="false" onMouseClicked="#OtherAction" text="Other" />
+            <TextField promptText="enter the language" />
+         </children>
+      </VBox>
+      <Button fx:id="btnPreview" layoutX="198.0" layoutY="334.0" mnemonicParsing="false" onMouseClicked="#PreviewAction" prefHeight="25.0" prefWidth="196.0" text="Preview" />
+      <TextArea layoutX="408.0" layoutY="183.0" prefHeight="200.0" prefWidth="184.0" />
+      <ImageView fitHeight="120.0" fitWidth="125.0" layoutX="34.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo_pionowe_reaktor.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="199.0" layoutY="205.0" prefHeight="96.0" prefWidth="183.0">
+         <children>
+            <Label text="Language English:" />
+            <RadioButton fx:id="rbBasic" mnemonicParsing="false" text="Basic">
+               <toggleGroup>
+                  <ToggleGroup fx:id="G1" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rbIntermediate" mnemonicParsing="false" selected="true" text="Intermediate" toggleGroup="$G1" />
+            <RadioButton fx:id="rbAdvanced" mnemonicParsing="false" text="Advanced" toggleGroup="$G1" />
+         </children>
+      </VBox>
+      <ComboBox fx:id="cmbCourses" layoutX="408.0" layoutY="98.0" prefHeight="25.0" prefWidth="184.0" promptText="expands" />
+      <TextField fx:id="tfName" layoutX="20.0" layoutY="86.0" prefHeight="25.0" prefWidth="149.0" promptText="Name" />
+      <TextField fx:id="tfLastName" layoutX="19.0" layoutY="123.0" prefHeight="25.0" prefWidth="149.0" promptText="Last Name" />
+      <TextField fx:id="tfMail" layoutX="19.0" layoutY="158.0" promptText="Mail" />
+      <TextField fx:id="tfPhone" layoutX="20.0" layoutY="188.0" prefHeight="25.0" prefWidth="149.0" promptText="Phone" />
+   </children>
+</AnchorPane>
