@@ -51,11 +51,11 @@
             <CheckBox fx:id="cbJava" mnemonicParsing="false" text="Java" />
             <CheckBox fx:id="cbPython" mnemonicParsing="false" text="Python" />
             <CheckBox fx:id="cbOther" mnemonicParsing="false" onMouseClicked="#OtherAction" text="Other" />
-            <TextField promptText="enter the language" />
+            <TextField fx:id="tfOther" promptText="enter the language" />
          </children>
       </VBox>
       <Button fx:id="btnPreview" layoutX="198.0" layoutY="334.0" mnemonicParsing="false" onMouseClicked="#PreviewAction" prefHeight="25.0" prefWidth="196.0" text="Preview" />
-      <TextArea layoutX="408.0" layoutY="183.0" prefHeight="200.0" prefWidth="184.0" />
+      <TextArea fx:id="taPreview" layoutX="408.0" layoutY="183.0" prefHeight="200.0" prefWidth="184.0" />
       <ImageView fitHeight="120.0" fitWidth="125.0" layoutX="34.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@logo_pionowe_reaktor.png" />
@@ -78,5 +78,6 @@
       <TextField fx:id="tfLastName" layoutX="19.0" layoutY="123.0" prefHeight="25.0" prefWidth="149.0" promptText="Last Name" />
       <TextField fx:id="tfMail" layoutX="19.0" layoutY="158.0" promptText="Mail" />
       <TextField fx:id="tfPhone" layoutX="20.0" layoutY="188.0" prefHeight="25.0" prefWidth="149.0" promptText="Phone" />
+      <Button fx:id="btBack" layoutX="8.0" layoutY="371.0" mnemonicParsing="false" onMouseClicked="#BackAction" text="Back" />
    </children>
 </AnchorPane>

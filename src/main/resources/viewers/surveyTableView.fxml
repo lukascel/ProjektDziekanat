@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="873.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.pwn.reaktor.dziekanat.controller.SurveyTableController">
+   <children>
+      <TableView fx:id="tbvSurvey" layoutX="22.0" layoutY="88.0" prefHeight="200.0" prefWidth="822.0">
+        <columns>
+          <TableColumn fx:id="tcId" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="tcFirstName" prefWidth="75.0" text="First Name" />
+            <TableColumn fx:id="tcLastName" prefWidth="75.0" text="Last Name" />
+            <TableColumn fx:id="tcMail" prefWidth="75.0" text="Mail" />
+            <TableColumn fx:id="tcPhone" prefWidth="75.0" text="Phone" />
+            <TableColumn prefWidth="75.0" text="Programming languages">
+               <columns>
+                  <TableColumn fx:id="tcJava" prefWidth="75.0" text="Java" />
+                  <TableColumn fx:id="tcPython" prefWidth="75.0" text="Pyhton" />
+                  <TableColumn fx:id="tcOther" prefWidth="75.0" text="Other" />
+                  <TableColumn fx:id="tcOtherDesc" prefWidth="75.0" text="Other Description" />
+               </columns>
+            </TableColumn>
+            <TableColumn fx:id="tcLanguage" prefWidth="75.0" text="Language" />
+            <TableColumn fx:id="tcCourse" prefWidth="75.0" text="Course" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnBack" layoutX="22.0" layoutY="339.0" mnemonicParsing="false" onMouseClicked="#BackEvent" text="Back" />
+      <Button fx:id="btnDelete" layoutX="792.0" layoutY="339.0" mnemonicParsing="false" onMouseClicked="#DeleteEvent" text="Delete" />
+   </children>
+</AnchorPane>

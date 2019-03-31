@@ -25,6 +25,19 @@ public class UserController {
     private Button btnSurvey;
 
     @FXML
+    private Button btnYourSurveys;
+
+    @FXML
+    void YourSurveysAction(MouseEvent event) throws IOException {
+        Stage primaryStage = DziekanatMain.getPrimaryStage();
+
+        Parent root = FXMLLoader.load(getClass().getResource("/viewers/surveyTableView.fxml"));
+        primaryStage.setTitle("Yours Surveys");
+        primaryStage.setScene(new Scene((root)));
+        primaryStage.show();
+    }
+
+    @FXML
     void SurveyAction(MouseEvent event) throws IOException {
         Stage primaryStage = DziekanatMain.getPrimaryStage();
 

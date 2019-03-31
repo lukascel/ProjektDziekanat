@@ -8,6 +8,7 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.internal.util.config.ConfigurationException;
 import org.hibernate.service.ServiceRegistry;
 import pl.pwn.reaktor.dziekanat.model.Student;
+import pl.pwn.reaktor.dziekanat.model.Survey;
 import pl.pwn.reaktor.dziekanat.model.User;
 
 public class HibernateUtils {
@@ -34,7 +35,8 @@ public class HibernateUtils {
 
             MetadataSources sources = new MetadataSources(serviceRegistry)
                     .addAnnotatedClass(User.class)
-                    .addAnnotatedClass(Student.class);
+                    .addAnnotatedClass(Student.class)
+                    .addAnnotatedClass(Survey.class);
 
             Metadata metadata = sources.getMetadataBuilder()
                     .build();
